@@ -14,9 +14,10 @@ REFRESH_TOKEN_URL = "https://oauth2.googleapis.com/token"
 REVOKE_TOKEN_URL = "https://oauth2.googleapis.com/revoke"
 CLIENT_ID = "80547735486-v27sr7scvtldgdagtj5gpf8ke2bquoph.apps.googleusercontent.com"
 CLIENT_SECRET = "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"
+REDIRECT_URI="https://share.streamlit.io/app/autorregulacao/component/streamlit_oauth.authorize_button/index.html"
 #REDIRECT_URI = "http://localhost:8501/component/streamlit_oauth.authorize_button/index.html"
-REDIRECT_URI = "http://autorregulacao.streamlit.app/component/streamlit_oauth.authorize_button/index.html"
-#REDIRECT_URI = "https://autorregulacao.streamlit.app/component/streamlit_oauth.authorize_button/index.html"
+#REDIRECT_URI = "http://autorregulacao.streamlit.app/component/streamlit_oauth.authorize_button/index.html"
+REDIRECT_URI = "https://autorregulacao.streamlit.app/component/streamlit_oauth.authorize_button/index.html"
 SCOPE = "openid profile email https://www.googleapis.com/auth/classroom.courses.readonly"
 
 # Set environment variables
