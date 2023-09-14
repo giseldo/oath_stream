@@ -15,7 +15,8 @@ REVOKE_TOKEN_URL = "https://oauth2.googleapis.com/revoke"
 CLIENT_ID = "80547735486-v27sr7scvtldgdagtj5gpf8ke2bquoph.apps.googleusercontent.com"
 CLIENT_SECRET = "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"
 #REDIRECT_URI = "http://localhost:8501/component/streamlit_oauth.authorize_button/index.html"
-REDIRECT_URI = "https://autorregulacao.streamlit.app/component/streamlit_oauth.authorize_button/index.html"
+REDIRECT_URI = "http://autorregulacao.streamlit.app/component/streamlit_oauth.authorize_button/index.html"
+#REDIRECT_URI = "https://autorregulacao.streamlit.app/component/streamlit_oauth.authorize_button/index.html"
 SCOPE = "openid profile email https://www.googleapis.com/auth/classroom.courses.readonly"
 
 # Set environment variables
@@ -43,21 +44,20 @@ if 'token' not in st.session_state:
 else:
     # If token exists in session state, show the token
     token = st.session_state['token']
-    st.write("Funcionou")
+    st.write("Funcionou!!!")
     st.json(token)
-    access_token =token.get("access_token")
-    st.write(access_token)
-    creds = Credentials(token=access_token)
     
+    #access_token =token.get("access_token")
+    #st.write(access_token)
+    #creds = Credentials(token=access_token)
     #creds = AccessTokenCredentials(token=token)
-    service = build('classroom', 'v1', credentials=creds)
+    #service = build('classroom', 'v1', credentials=creds)
     # Call the Classroom API
-    results = service.courses().list(pageSize=10).execute()
-    courses = results.get('courses', [])
-    
-    st.write('Courses:')
-    for course in courses:
-        st.write(course['name'])
+    #results = service.courses().list(pageSize=10).execute()
+    #courses = results.get('courses', [])
+    #st.write('Courses:')
+    #for course in courses:
+    #    st.write(course['name'])   
         
     if st.button("Refresh Token"):
         # If refresh token button is clicked, refresh the token
